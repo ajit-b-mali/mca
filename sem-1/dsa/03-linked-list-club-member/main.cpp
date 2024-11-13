@@ -14,6 +14,7 @@ Node* concat(Node* first, Node* second); // done
 std::string get_string(const std::string& prompt)
 {
     std::cin.clear();
+    std::cin.sync();
     std::cout << prompt;
     std::string value;
     std::getline(std::cin, value);
@@ -22,8 +23,8 @@ std::string get_string(const std::string& prompt)
 
 int main()
 {
-    Node* head;
-    int n;
+    Node* head = nullptr;
+    int n = 0;
     std::cout << "How many entries? >>> ";
     std::cin >> n;
     for (int i{ 0 }; i < n; ++i)
@@ -31,8 +32,7 @@ int main()
         auto prn{ get_string("Enter prn: ") };
         auto name{ get_string("Enter name: ") };
         auto ay{ get_string("Enter academic year: ") };
-        std::cout << name;
-        // head = append({prn, name, ay}, head);
+        head = append({prn, name, ay}, head);
     }
     print(head, "\nLL:\n");
 }

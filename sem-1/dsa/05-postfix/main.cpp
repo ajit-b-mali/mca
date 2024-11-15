@@ -1,4 +1,5 @@
 #include "Stack.h"
+
 #include <iostream>
 #include <string>
 #include <cctype>

@@ -4,17 +4,14 @@
 struct Data { std::string prn; std::string name; std::string ay; };
 struct Node { Data data; Node* next; };
 
-Node* append(const Data& data, Node* head = nullptr); // done
-Node* remove(const std::string& prn, Node* head); // done
-int len(Node* head); // done
-void print(Node* head, const std::string& start = ""); // done
-Node* concat(Node* first, Node* second); // done
-// update the information if any member canceled with a new Entry
+Node* append(const Data& data, Node* head = nullptr);
+Node* remove(const std::string& prn, Node* head);
+int len(Node* head);
+void print(Node* head, const std::string& start);
+Node* concat(Node* first, Node* second);
 
 std::string get_string(const std::string& prompt)
 {
-    std::cin.clear();
-    std::cin.sync();
     std::cout << prompt;
     std::string value;
     std::getline(std::cin, value);
@@ -27,6 +24,7 @@ int main()
     int n = 0;
     std::cout << "How many entries? >>> ";
     std::cin >> n;
+	std::cin.ignore();
     for (int i{ 0 }; i < n; ++i)
     {
         auto prn{ get_string("Enter prn: ") };
@@ -61,6 +59,7 @@ Node* remove(const std::string& prn, Node* head)
         {
             Node* trash{ temp->next };
             temp->next = temp->next->next;
+			trash->next = nullptr;
             delete trash;
             break;
         }
@@ -92,8 +91,10 @@ void print(Node* head, const std::string& start)
 Node* concat(Node* first, Node* second)
 {
     if (!first) return second;
+    if (!second) return first;
     Node* temp{ first };
     while (temp->next) temp = temp->next;
     temp->next = second;
     return first;
 }
+

@@ -1,7 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <utility>
-#include <algorithm>
 
 using IntMat = std::vector<std::vector<int>>;
 
@@ -106,3 +104,4 @@ IntMat getMatrix(std::string msg)
 	}
 	return mat;
 }
+

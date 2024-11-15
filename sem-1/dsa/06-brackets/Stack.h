@@ -23,19 +23,16 @@ public:
         delete temp;
     }
 
-    T    top()   { return m_top->data;      }
+    T top() { return m_top->data; }
     bool empty() { return m_top == nullptr; }
-    int  size()  { return m_size;           }
+    int  size()  { return m_size; }
 
 private:
     struct Node {
         T data{};
         Node* next{};
     };
-
-private:
     Node* m_top{ nullptr };
     int m_size{ 0 };
 };
-
 #endif

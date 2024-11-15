@@ -1,6 +1,7 @@
+#include "Stack.h"
+
 #include <iostream>
 #include <string>
-#include <stack>
 
 char returnOpen(char c)
 {
@@ -15,7 +16,7 @@ char returnOpen(char c)
 
 bool validExp(const std::string& exp)
 {
-	std::stack<int> st;
+	Stack<int> st;
 	for (const char c: exp)
 	{
 		if (c == '(' or c == '[' or c == '{')

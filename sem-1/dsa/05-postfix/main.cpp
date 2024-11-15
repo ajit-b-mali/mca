@@ -1,5 +1,4 @@
 #include "Stack.h"
-// #include <stack>
 #include <iostream>
 #include <string>
 #include <cctype>
@@ -24,7 +23,7 @@ char returnOpen(char c)
 
 std::string infixToPostfix(const std::string& infix)
 {
-	Stack st;
+	Stack<char> st;
 	// std::stack<char> st;
 	std::string postfix;
 

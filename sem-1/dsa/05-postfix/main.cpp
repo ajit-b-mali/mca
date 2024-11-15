@@ -1,6 +1,7 @@
+#include "Stack.h"
+// #include <stack>
 #include <iostream>
 #include <string>
-#include <stack>
 #include <cctype>
 
 int order(char opr)
@@ -23,7 +24,8 @@ char returnOpen(char c)
 
 std::string infixToPostfix(const std::string& infix)
 {
-	std::stack<char> st;
+	Stack st;
+	// std::stack<char> st;
 	std::string postfix;
 
 	for (char c: infix)

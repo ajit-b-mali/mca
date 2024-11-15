@@ -3,7 +3,9 @@
 #include <utility>
 #include <algorithm>
 
-typedef std::vector<std::vector<int>> IntMat;
+using IntMat = std::vector<std::vector<int>>;
+
+IntMat getMatrix(std::string msg);
 
 class SparseMatrix
 {
@@ -26,8 +28,6 @@ public:
 private:
 	IntMat m_mat{};
 };
-
-IntMat getMatrix(std::string msg);
 
 /*--------------MAIN------------------------------------*/
 int main()

@@ -1,18 +1,21 @@
 #include <iostream>
+#include <queue>
 #include <array>
+#include <utility>
 
 using Board = std::array<std::array<int, 4>, 4>;
+using Position = std::pair<int, int>;
+
 void print(Board& board);
-void solve4queens(Board& board);
-void solve4Q(Board& board, int row);
+void solve4Q(Board& board, int row, std::queue<Position>& q);
 bool isValid(Board& board, int row, int col);
 
 
 int main()
 {
-    Board board{};
-    solve4queens(board);
-
+	Board board{};
+	std::queue<Position> q{};
+    solve4Q(board, 0, q);
     return 0;
 }
 
@@ -23,21 +26,16 @@ void print(Board& board)
         for (int j = 0; j < 4; j++)
         {
             if (board[i][j])
-                std::cout << board[i][j] << ' ';
+                std::cout << "Q ";
             else
-                std::cout << board[i][j] << ' ';
+                std::cout << ". ";
         }
         std::cout << '\n';
     }
     std::cout << '\n';
 }
 
-void solve4queens(Board& board)
-{
-    solve4Q(board, 0);
-}
-
-void solve4Q(Board& board, int row)
+void solve4Q(Board& board, int row, std::queue<Position>& q)
 {
     if (row == 4)
     {
@@ -50,8 +48,10 @@ void solve4Q(Board& board, int row)
         if (isValid(board, row, j))
         {
             board[row][j] = 1;
-            solve4Q(board, row + 1);
+			q.push({row, j});
+            solve4Q(board, row + 1, q);
             board[row][j] = 0;
+			q.pop();
         }
     }
 }

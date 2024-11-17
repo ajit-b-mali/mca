@@ -8,8 +8,8 @@ public:
 	Polynomial(int degree = 0)
 	: m_degree{degree} { m_arr.resize(degree); }
 	
-	int degree() { return m_degree; }
-	int coeff(int exp) { return m_arr[exp]; }
+	int degree() const { return m_degree; }
+	int coeff(int exp) const { return m_arr[exp]; }
 	void setCoeff(int exp, int coeff) { m_arr[exp] = coeff; }
 	
 	void get(std::string msg);
@@ -20,7 +20,7 @@ private:
 };
 
 std::ostream& operator<<(std::ostream& out, Polynomial poly);
-Polynomial operator+(Polynomial first, Polynomial second);
+Polynomial operator+(const Polynomial& first, const Polynomial& second);
 
 // ---------- main -----------
 int main()
@@ -33,7 +33,7 @@ int main()
 }
 // -----------end -----------------
 
-Polynomial operator+(Polynomial first, Polynomial second)
+Polynomial operator+(const Polynomial& first, const Polynomial& second)
 {
 	Polynomial result( std::max(first.degree(), second.degree()) );
 	int i;
@@ -54,15 +54,6 @@ Polynomial operator+(Polynomial first, Polynomial second)
 	
 	return result;
 }
-
-/**
- *		- else
- *			- else if coefficient == 1 --> output " + " + "x^i"
- *			- else if coefficient == -1 --> output " - " + "x^i"
- *			- else
- *				- if coeff < 0 --> output " - " + "abs(coeff) x^i"
- *				- else --> output " + " + "coeff x^i"
-**/
 
 std::ostream& operator<<(std::ostream& out, Polynomial poly)
 {

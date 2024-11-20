@@ -3,29 +3,21 @@
 #include <iostream>
 #include <string>
 
-char returnOpen(char c)
-{
-	switch(c)
-	{
-	case ')': return '(';
-	case ']': return '[';
-	case '}': return '{';
-	}
-	return ' ';
-}
-
 bool validExp(const std::string& exp)
 {
 	Stack<int> st;
 	for (const char c: exp)
 	{
-		if (c == '(' or c == '[' or c == '{')
+		if (c == '(' || c == '[' || c == '{')
 			st.push(c);
-		else if (c == ')' or c == ']' or c == '}')
-		{
-			if (st.empty() || st.top() != returnOpen(c)) return false;
+		else if (c == ')' && (st.empty() || st.top() != '('))
+			return false;
+		else if (c == ']' && (st.empty() || st.top() != '['))
+			return false;
+		else if (c == '}' && (st.empty() || st.top() != '{'))
+			return false;
+		else if (c == ')' || c == ']' || c == '}')
 			st.pop();
-		}
 	}
 	return st.empty();
 }

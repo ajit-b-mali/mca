@@ -1,7 +1,6 @@
 #include "Binary.h"
 
 #include <iostream>
-#include <sstream>
 
 void Binary::push_front(bool d)
 {
@@ -57,10 +56,8 @@ Binary Binary::twos() const
 std::istream& operator>>(std::istream& in, Binary& binary)
 {
     std::string str{};
-    in >> str;
-    std::istringstream sin{str};
-    char d;
-    while (sin >> d) binary.push_back(d - '0');
+	in >> str;
+	for (auto c: str) binary.push_back(c - '0');
     return in;
 }
 
@@ -79,8 +76,9 @@ Binary operator+(const Binary& first, const Binary& second)
 {
     Binary::Node* t1{ first.tail };
     Binary::Node* t2{ second.tail };
+
     Binary result{};
-    bool carryon{0};
+    bool carryon{ 0 };
     while (t1 && t2)
     {
         result.push_front(t1->data ^ t2->data ^ carryon);
@@ -100,7 +98,6 @@ Binary operator+(const Binary& first, const Binary& second)
         carryon = t2->data && carryon;
         t2 = t2->back;
     }
-
     if (carryon) result.push_front(carryon);
     return result;
 }

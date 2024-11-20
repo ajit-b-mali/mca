@@ -7,9 +7,6 @@
 class Binary
 {
 public:
-    struct Node { bool data{}; Node* next{}; Node* back{}; };
-
-public:
     Binary() = default;
     Binary(std::initializer_list<int> digits) { for (int d: digits) push_back(d); }
 
@@ -22,11 +19,13 @@ public:
     friend std::ostream& operator<<(std::ostream& out, const Binary& binary);
 
 private:
+    struct Node { bool data; Node* next; Node* back; };
+
+private:
     Node* head{ nullptr };
     Node* tail{ nullptr };
 };
 
 std::istream& operator>>(std::istream& in, Binary& binary);
-Binary operator+(const Binary& first, const Binary& second);
 
 #endif

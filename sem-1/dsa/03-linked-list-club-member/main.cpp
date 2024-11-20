@@ -10,29 +10,24 @@ int len(Node* head);
 void print(Node* head, const std::string& start);
 Node* concat(Node* first, Node* second);
 
-std::string get_string(const std::string& prompt)
-{
-    std::cout << prompt;
-    std::string value;
-    std::getline(std::cin, value);
-    return value;
-}
-
 int main()
 {
-    Node* head = nullptr;
-    int n = 0;
-    std::cout << "How many entries? >>> ";
-    std::cin >> n;
-	std::cin.ignore();
-    for (int i{ 0 }; i < n; ++i)
-    {
-        auto prn{ get_string("Enter prn: ") };
-        auto name{ get_string("Enter name: ") };
-        auto ay{ get_string("Enter academic year: ") };
-        head = append({prn, name, ay}, head);
-    }
-    print(head, "\nLL:\n");
+    Node* a = nullptr;
+	a = append({"AI-24016", "Ajit Mali", "2024-2025"},a );
+	a = append({"AI-24100", "Prathamesh Lohar", "2024-2025"},a );
+	a = append({"AI-24020", "xyz", "2024-2025"},a );
+	a = remove("AI-24020", a);
+	
+	Node* b = nullptr;
+	b = append({"AI-24035", "Vijay Patil", "2024-2025"}, b);
+	b = append({"AI-24107", "Atharv Darp", "2024-2025"}, b);
+
+	print(a, "club members of a:\n");
+	print(b, "club members of b:\n");
+
+	Node* fymca = concat(a, b);
+	print(fymca, "combined devision:\n");
+	std::cout << "total count: " << len(fymca) << '\n';
 }
 
 Node* append(const Data& data, Node* head)
@@ -59,7 +54,6 @@ Node* remove(const std::string& prn, Node* head)
         {
             Node* trash{ temp->next };
             temp->next = temp->next->next;
-			trash->next = nullptr;
             delete trash;
             break;
         }
@@ -82,7 +76,9 @@ void print(Node* head, const std::string& start)
     Node* temp{ head };
     while (temp)
     {
-        std::cout << temp->data.prn << ' ' << temp->data.name << ' ' << temp->data.ay << '\n';
+        std::cout << temp->data.prn
+			<< ' ' << temp->data.name
+			<< ' ' << temp->data.ay << '\n';
         temp = temp->next;
     }
     std::cout << '\n';

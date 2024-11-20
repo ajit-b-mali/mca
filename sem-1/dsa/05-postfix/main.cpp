@@ -4,6 +4,25 @@
 #include <string>
 #include <cctype>
 
+int order(char opr);
+char returnOpen(char c);
+std::string infixToPostfix(const std::string& infix);
+
+double evalPostfix(const std::string& postfix);
+
+int main()
+{
+	std::string infix;
+	std::cout << "Enter infix: ";
+	std::getline(std::cin, infix);
+
+	std::string postfix = infixToPostfix(infix);
+	std::cout << "POSTFIX: " << postfix << '\n';
+	std::cout << "RESULT: " << evalPostfix(postfix) << '\n';
+
+	return 0;
+}
+
 int order(char opr)
 {
 	if (opr == '+' || opr == '-') return 1;
@@ -25,22 +44,23 @@ char returnOpen(char c)
 std::string infixToPostfix(const std::string& infix)
 {
 	Stack<char> st;
-	// std::stack<char> st;
 	std::string postfix;
 
 	for (char c: infix)
 	{
+		bool isOpen = c == '(' || c == '[' || c == '{'; 
+		bool isClose = c == ')' || c == ']' || c == '}';
+
 		if (c == ' ') continue;
 		if (std::isalnum(c))
 			postfix += c;
-		else if (st.empty() || order(c) > order(st.top()) || c == '(' || c == '[' || c =='{')
+		else if (st.empty() || order(c) > order(st.top()) || isOpen)
 			st.push(c);
-		else if (c == ')' || c == ']' || c == '}')
+		else if (isClose)
 		{
 			while (st.empty() || st.top() != returnOpen(c))
 			{
-				postfix += st.top();
-				st.pop();
+				postfix += st.top(); st.pop();
 			}
 			st.pop();
 		}
@@ -48,8 +68,7 @@ std::string infixToPostfix(const std::string& infix)
 		{
 			while (!st.empty())
 			{
-				postfix += st.top();
-				st.pop();
+				postfix += st.top(); st.pop();
 			}
 			st.push(c);
 		}
@@ -57,19 +76,34 @@ std::string infixToPostfix(const std::string& infix)
 
 	while (!st.empty())
 	{
-		postfix += st.top();
-		st.pop();
+		postfix += st.top(); st.pop();
 	}
 	return postfix;
 }
 
-int main()
+double evalPostfix(const std::string& postfix)
 {
-	std::string infix;
-	std::cout << "Enter infix: ";
-	std::getline(std::cin, infix);
+	Stack<double> st;
 
-	std::string postfix = infixToPostfix(infix);
-	std::cout << "POSTFIX: " << postfix << '\n';
-	return 0;
+	for (auto c: postfix)
+	{
+		if (std::isdigit(c))
+			st.push(c - '0');
+		else if (std::isalpha(c))
+			st.push(0);
+		else
+		{
+			double b = st.top(); st.pop();
+			double a = st.top(); st.pop();
+
+			if      (c == '+') st.push(a + b);
+			else if (c == '-') st.push(a - b);
+			else if (c == '*') st.push(a * b);
+			else if (c == '/') st.push(a / b);
+			else               st.push(0);
+		}
+	}
+
+	return st.top();
 }
+

@@ -29,8 +29,8 @@ public:
 
 private:
     struct Node {
-        T data{};
-        Node* next{};
+        T data;
+        Node* next;
     };
 
 private:

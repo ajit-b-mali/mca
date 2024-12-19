@@ -3,10 +3,9 @@
 #include <array>
 #include <cmath>
 
-class QueenPosition
+struct QState
 {
-public:
-    int board[4] = {-1, -1, -1, -1};
+    int board[4] = {-1};
     int row = 0;
 };
 
@@ -16,15 +15,17 @@ bool isValid(int board[4], int row, int col)
     {
         int j = board[i];
         if (j == col || std::abs(i - row) == std::abs(j - col))
-        {
             return false;
-        }
     }
     return true;
 }
 
 void printBoard(int board[4])
 {
+    static int cnt = 0;
+    std::cout << "\nPossibility >>> " << cnt << ":\n";
+    cnt += 1;
+    
     for (int i = 0; i < 4; ++i)
     {
         for (int j = 0; j < 4; ++j)
@@ -40,12 +41,12 @@ void printBoard(int board[4])
 }
 
 void solveQueens() {
-    std::queue<QueenPosition> q;
+    std::queue<QState> q;
     q.push({});
 
     while (!q.empty())
     {
-        QueenPosition current = q.front(); q.pop();
+        QState current = q.front(); q.pop();
 
         if (current.row == 4) 
         {
@@ -58,7 +59,7 @@ void solveQueens() {
         {
             if (isValid(current.board, row, col))
             {
-                QueenPosition next = current;
+                QState next = current;
                 next.board[row] = col;
                 next.row++;
                 q.push(next);

@@ -1,0 +1,61 @@
+# Data Science Laboratory
+
+- Course code: MCA01604
+- Course prerequisite: basic programming skills(Python/R), basic statistics knowledge
+
+## Course Objectives
+
+- To study applications of data science in solving real life problems
+
+## Course Outcomes: CO605._
+
+1. **Apply** modeling techniques using any data analytic tool - `[1-6]`
+2. **Implement** mining technique using any data analytic tool - `[7-9]`
+3. **Utilize** data analysis using visualization - `[10-12]`
+4. **Design** and develop real-time data science application using any data analytic tool - `[13]`
+
+## List of Laboratory Assignments
+
+1. Use the Iris dataset and train a Logistic Regression model to classify whether a flower is of species Iris-setosa or not. Evaluate model accuracy, precision, and recall.
+
+2. Load the Titanic dataset, perform basic preprocessing (handle missing values, encode categorical variables), and train a Decision Tree classifier to predict the model. Plot the confusion matrix.
+
+3. Use the Naive Bayes classifier to perform sentiment analysis on a dataset of movie reviews, classifying them as either positive or negative based on the review text
+
+4. A company wants to predict the salary of employees based on their years of experience. The company has collected data on the salaries and experience of 100 employees. Use simple linear regression to model the relationship between salary and experience
+
+5. Use a dataset with features like square footage vs house price. Implement a simple linear regression model to predict house prices. Plot the regression line and calculate MSE and R^2 score
+
+6. Load the tissue_gene_expression dataset. Run a k-means clustering on the data with K=7. Make a table comparing the identified clusters to the actual tissue types. Run the algorithm several times to see how the answer changes.
+
+7. Using grocery dataset with minimum support to 0.001 and minimum confidence of 0.8 build a Frequent Pattern Tree (FP-Tree). Show for each transaction how the tree evolves
+
+8. Use the Apriori algorithm on the grocery dataset with minimum support to 0.001 and minimum confidence of 0.8 indicate the top 5 association rules that are generated and highlight the strong ones, sort them by confidence
+
+9. Use the FP-Growth Algorithm to perform Market Basket Analysis on a retail dataset. You will extract frequent item sets and generate association rules to discover purchasing patterns and help improve sales strategies
+
+10. Create Bar Chart-Stacked taking X axis as Month and Y axis as Revenue and add Legend 
+    - colors <- c("green", "orange", "brown")
+    - months <- c("Mar", "Apr", "May", "Jun", "Jul")
+    - regions <- c("East", "West", "North")
+
+11. Read the file moviesData.csv to create a bar chart of critics_score for the first 10 movies. Save the plot.
+
+12. Use the data set "mtcars" and create boxplot for "mpg" and "cyl" columns
+
+13. List of Mini-Project: Design and Develop Real-time Data Science Application
+    1. Image Recognition
+    2. Customer Segmentation using Clustering
+    3. Fake News Detection
+    4. Emotion Recognition
+    5. Chatbot
+    6. House Price Prediction
+    7. Student Performance Analysis
+    8. Weather Forecasting
+    9. Credit Card Fraud Detection
+    10. Diabetes Prediction
+    11. Stock Price Trend Prediction
+    12. Election Data Analysis
+    13. Book Recommendation System
+    14. Car Price Prediction
+    15. Music Genre Classification

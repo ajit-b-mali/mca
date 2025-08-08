@@ -1,0 +1,124 @@
+<!-------------------------------------------------------->
+<!-- - UNIT I: Introduction to Data Science ----------- -->
+<!-------------------------------------------------------->
+
+<!-- CDD
+
+Q1. What is Data Science? Explain Purpose of Data Science?
+Q2. What is Data Science? Explain the need of Data Science?
+Q3. Explain Data science process in detail.
+Q4. Explain the Role of Data Scientist for successful analytic project.
+Q5. Differentiate between -
+	- a. Structured and Unstructured Data
+	- b. Quantitative vs. Categorical Data
+	- c. small Data Vs. Big data
+	- d. Business Intelligence and Data Science
+
+Q6. Explain use of Data Science with an example.
+Q7. Differentiate between Big data and Data Science.
+
+<!-- CIE-I
+
+Q8. Explain the different roles of Data Science.
+Q9. Explain the different stages of a Data Science.
+Q10. Compare quantitative and categorical data with the help of suitable example.
+
+<!-- CIE-I - repeat
+
+_. What is the need of Data Science? [ see CDD Q2 ]
+_. Compare structured and Unstructured data with the help of suitable example. [ see CDD Q5a ]
+_. Explain the Role of Data Scientist for successful analytic project. [ see CDD Q4]
+_. Differentiate between
+ 	_. Structured and Unstructured Data
+ 	_. Quantitative vs. Categorical, Data
+ 	_. small Data Vs. Big data
+ 	_. Business Intelligence and Data Science [ see CDD Q5 ]
+_. Differentiate between Big data and Data Science [ see CDD Q7 ]
+
+<!-------------------------------------------------------->
+<!-- - UNIT II: Data Warehouse and Data Preprocessing - -->
+<!-------------------------------------------------------->
+
+<!-- CDD
+
+Q1. What is data preprocessing? Explain the need of data preprocessing?
+Q2. What is the problem associated with data processing?
+Q3. What are different Data Preprocessing Techniques?
+Q4. What is Data Warehouse? Explain the advantages and disadvantages of Data Warehouse?
+Q5. Explain 3-tire data warehouse architecture and its various components.
+Q6. What are importance of data preprocessing?
+Q7. With respect to Data warehouse explain following terms with suitable example:
+    a. Data Lake
+    b. Data Mart
+    c. Fact table
+
+<!-- CIE-I
+
+Q9. Explain Data Warehouse architecture.
+
+<!-- CDD - repeat
+
+_. Explain Types of data preprocessing. [ see CDD Q3 ]
+
+<!-- CIE-I - repeat
+
+_. What is the Need of Data Warehouse? [ see CDD Q1 ]
+_. Identify the techniques of data pre-processing. [ see CDD Q3 ]
+_. What are different Data Pre-processing Techniques? [ see CDD Q3 ]
+_. Explain 3-tier data warehouse architecture and its various components. [ see CDD Q5 ]
+_. Explain Types of data pre-processing. [ see CDD Q3 ]
+_. What is the problem associated with data processing? [ see CDD Q2 ]
+_. What is Data Warehouse? Explain the advantages and disadvantages of Data Warehouse. [ see CDD Q4 ]
+
+<!-------------------------------------------------------->
+<!-- - UNIT III: Classification and Regression -------- -->
+<!-------------------------------------------------------->
+
+Q1. What are Decision Trees? Explain with the help of example.
+Q2. What is Naïve Bayesian classifier? Explain with the help of Example.
+Q3. Where Regression methods are applied? How it plays important role in data analysis?
+Q4. Explain working of Nearest Neighbor classifier with suitable example.
+Q5. Explain the different types of classification.
+Q6. Given a real-world scenario, how would you use the KNN algorithm to solve a practical problem?
+Q7. Differentiate between Decision tree and random forest.
+Q8. Explain different types of regression.
+
+<!-------------------------------------------------------->
+<!-- - UNIT IV: Clustering ---------------------------- -->
+<!-------------------------------------------------------->
+
+Q1. Give a thorough explanation of partitioning clustering.
+Q2. Differentiate hierarchical clustering and K-Means Clustering.
+Q3. Explain DBScan Algorithm for Density based Clustering.
+Q4. With reference to Hierarchical Clustering, explain the issue of connectivity Constraints.
+Q5. Explain Applications of clustering.
+Q6. What is clustering? Clarify the various applications of clustering.
+Q7. Illustrate bottom-up and top-down hierarchical clustering approach with an example in detail.
+
+<!-------------------------------------------------------->
+<!-- - UNIT V: Association Rule Mining ---------------- -->
+<!-------------------------------------------------------->
+
+Q1. What is frequent pattern mining? Explain Frequent Itemsets, Closed Itemsets, and Association Rules with example.
+Q2. Write down the difference between Apriori and Eclat.
+Q3. Define FP growth What are the advantages of FP growth over Apriori Agorithm.
+Q4. Explain Apriori algorithm with example.
+Q5. What is Association rule? What are the Applications of Association rule mining?
+Q6. Discuss Support, Confidence, Lift in details.
+Q7. Compare and Contrast FP growth and Apriori algorithm.
+
+<!-------------------------------------------------------->
+<!-- - UNIT VI: Data Visualization -------------------- -->
+<!-------------------------------------------------------->
+
+Q1. What is Data Visualization? Explain benefits of Data Visualization.
+Q2. Analyze the various types of data visualization.
+Q3. Explain Bar Graph, Stacked Bar Chart, Pie Chart, Line Chart, Area Chart, Treemap chart.
+Q4. What are the challenges for visualizing data?
+Q5. Explain Heatmap, Waterfall Chart, Scatter Plot, Histogram, Box plot.
+Q6. Write use and importance of following chart types in data analysis
+    a. Histogram
+    b. Line Chart
+    c. Pie Chart
+Q7. Illustrate the data visualization techniques.
+Q8. Describe Bar Graph, Stacked Bar Chart, Area Chart.

@@ -1,0 +1,28 @@
+UNIT I: Introduction to Software Assurance
+
+Q1. What is Quality ? Differentiate between Quality Assurance and Quality Control with suitable examples
+Q2. Write note on – ISO9000, CMM
+Q3. Explain criteria for the success of a software project
+Q4. Construct a checklist based on success criteria to evaluate whether a given software project has met its goals.
+Q5. Given a description of an organization’s software development processes, how would you determine which CMM maturity level the organization currently belongs to? Explain the criteria you would use in your assessment.
+Q6. Explain process-oriented software development
+Q7. Explain Quality Management System (QMS) principles.
+Q8. Explain metrics in software development in detail.
+
+UNIT II: Basics of Software Testing
+
+Q1. Explain concept of verification and validation
+Q2. Explain levels of testing
+Q3. Explain Testing Life cycle in detail.
+Q4. Write note on - 
+	a. Test-Driven Development(TDD)
+	b. Behavior-Driven Development(BDD)
+	c. Acceptance Test-Driven Development(ATDD)
+Q5. Develop test cases for ATM system/online shopping/flight booking system/Railway 
+reservation system
+Q6. Construct test plan for ATM system/online shopping/flight booking system/Railway 
+Reservation System
+Q7. Explain Bug life cycle
+Q8. What is defect repository? Explain with suitable example.
+Q9. Explain Testing Life cycle in detail.
+Q10. Develop test case for Username and Password

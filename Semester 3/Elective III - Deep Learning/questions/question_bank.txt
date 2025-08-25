@@ -1,0 +1,29 @@
+<!-- ------------------------------------------- -->
+<!-- - UNIT I: Introduction to Deep Learning --- -->
+<!-- ------------------------------------------- -->
+
+
+Q1. Compare and contrast the working of the human brain with that of a neural network. 
+Q2. Describe various types of data handled by deep learning models with examples.
+Q3. Explain the common architectural principles followed in designing deep learning models.
+Q4. What is TensorFlow? Explain its features and significance in deep learning.
+Q5. Describe the role of deep learning in time series, image, and video data analysis.
+Q6. What is Deep Learning? What was the role of deep learning in AlphaGo’s success?
+Q7. List any five real-world applications of Deep Learning.
+Q8. Compare and contrast machine learning and deep learning.
+
+<!-- ------------------------------------------- -->
+<!-- - UNIT II: Fundamentals of Neural Network - -->
+<!-- ------------------------------------------- -->
+
+Q1. Describe the structure and working of an artificial neuron with a diagram.
+Q2. Explain different learning rules used in neural networks.
+Q3. What is an activation function? Give examples. Explain its use in neural networks?
+Q4. What is a perceptron? Describe perceptron learning algorithm.
+Q5. Compare linear and non-linear activation functions with suitable examples.
+Q6. Differentiate between single-layer and multi-layer feed-forward networks.
+Q7. Explain the working of a Recurrent Neural Network (RNN) with its applications.
+Q8. Discuss various types of neural network architectures in detail.
+Q9. Describe how neural networks are used in music genre classification.
+Q10. Explain the role of activation functions in deep learning networks with diagrams.
+Q11. Write a short note on how neural networks learn patterns from data.

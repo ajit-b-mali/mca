@@ -8,7 +8,7 @@
 - To design and implement effective test cases for software applications using selenium
 - To apply deep learning techniques in solving real world problems
 
-## Course Outcomes: CO607._ and CO607A._
+## Course Outcomes: CO607.\_ and CO607A.\_
 
 1. **Design** test plan, test cases and defect repository using real world applications - `[1-2]`
 2. **Solve** given test scenarios using software test automation tool - Selenium - `[3-4]`
@@ -27,7 +27,7 @@
     - 7% of the amount for transaction > 2000
 
 3. Install Selenium IDE in Mozilla Firefox/Google Chrome. Test following scenario in Selenium IDE using record and replay. Invoke Google Chrome browser
-    - Open URL: www.google.com
+    - Open URL: <www.google.com>
     - Click on the Google Search text box
     - Type the value "java tutorials"
     - Click on any of java tutorial link
@@ -36,10 +36,7 @@
 
 ### Group B (Elective III): A - Deep Learning
 
-5. Explain the python libraries for deep neural networks. Write a Python program to build a simple neural network.
-
-6. Design and implement a CNN model to classify image dataset
-
-7. Write a program for Building an Image Classification model.
-
-8. Write a program for Anomaly Detection Using Autoencoder
+1. Explain the python libraries for deep neural networks. Write a Python program to build a simple neural network.
+2. Design and implement a CNN model to classify image dataset
+3. Write a program for Building an Image Classification model.
+4. Write a program for Anomaly Detection Using Autoencoder

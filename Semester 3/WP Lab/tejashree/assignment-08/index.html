@@ -1,0 +1,134 @@
+<!-- Create an application for Students Record using AngularJS. -->
+<!DOCTYPE html>
+<html lang="en" ng-app="studentApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Students Record - AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fafbfc;
+            color: #222;
+            margin: 40px;
+        }
+        h2 {
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        form {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        input {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 6px 10px;
+            font-size: 15px;
+            background: #fff;
+            outline: none;
+        }
+        button {
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 16px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-right: auto;
+        }
+        button:hover {
+            background: #444;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+        th, td {
+            padding: 10px 8px;
+            text-align: left;
+        }
+        th:last-child, td:last-child {
+            width: 110px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        td:last-child button {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 auto;
+        }
+        th {
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+            background: #f8f9fa;
+        }
+        tr:not(:last-child) td {
+            border-bottom: 1px solid #f1f1f1;
+        }
+        td:last-child {
+            text-align: right;
+        }
+        tr[ng-if] td {
+            text-align: center;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body ng-controller="StudentController">
+    <h2>Students Record Application</h2>
+    <form ng-submit="addStudent()">
+        <input type="text" ng-model="newStudent.name" placeholder="Name" required>
+        <input type="number" ng-model="newStudent.roll" placeholder="Roll No" required>
+        <input type="text" ng-model="newStudent.course" placeholder="Course" required>
+        <button type="submit">Add</button>
+    </form>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Course</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="student in students">
+            <td>{{$index + 1}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.roll}}</td>
+            <td>{{student.course}}</td>
+            <td>
+                <button ng-click="removeStudent($index)">Delete</button>
+            </td>
+        </tr>
+        <tr ng-if="students.length === 0">
+            <td colspan="5">No records found.</td>
+        </tr>
+    </table>
+    <script>
+        angular.module('studentApp', [])
+        .controller('StudentController', function($scope) {
+            $scope.students = [
+                { name: 'Tejashree', roll: 1, course: 'MCA' },
+                { name: 'Aadesh', roll: 2, course: 'MCA' }
+            ];
+            $scope.newStudent = {};
+
+            $scope.addStudent = function() {
+                if ($scope.newStudent.name && $scope.newStudent.roll && $scope.newStudent.course) {
+                    $scope.students.push(angular.copy($scope.newStudent));
+                    $scope.newStudent = {};
+                }
+            };
+
+            $scope.removeStudent = function(index) {
+                $scope.students.splice(index, 1);
+            };
+        });
+    </script>
+</body>
+</html>

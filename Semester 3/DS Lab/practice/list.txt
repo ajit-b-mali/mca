@@ -1,21 +1,3 @@
-# Data Science Laboratory
-
-- Course code: MCA01604
-- Course prerequisite: basic programming skills(Python/R), basic statistics knowledge
-
-## Course Objectives
-
-- To study applications of data science in solving real life problems
-
-## Course Outcomes: CO605._
-
-1. **Apply** modeling techniques using any data analytic tool - `[1-6]`
-2. **Implement** mining technique using any data analytic tool - `[7-9]`
-3. **Utilize** data analysis using visualization - `[10-12]`
-4. **Design** and develop real-time data science application using any data analytic tool - `[13]`
-
-## List of Laboratory Assignments
-
 1. Use the Iris dataset and train a Logistic Regression model to classify whether a flower is of species Iris-setosa or not. Evaluate model accuracy, precision, and recall.
 
 2. Load the Titanic dataset, perform basic preprocessing (handle missing values, encode categorical variables), and train a Decision Tree classifier to predict the model. Plot the confusion matrix.
@@ -42,20 +24,3 @@
 11. Read the file moviesData.csv to create a bar chart of critics_score for the first 10 movies. Save the plot.
 
 12. Use the data set "mtcars" and create boxplot for "mpg" and "cyl" columns.
-
-13. List of Mini-Project: Design and Develop Real-time Data Science Application
-    1. Image Recognition
-    2. Customer Segmentation using Clustering
-    3. Fake News Detection
-    4. Emotion Recognition
-    5. Chatbot
-    6. House Price Prediction
-    7. Student Performance Analysis
-    8. Weather Forecasting
-    9. Credit Card Fraud Detection
-    10. Diabetes Prediction
-    11. Stock Price Trend Prediction
-    12. Election Data Analysis
-    13. Book Recommendation System
-    14. Car Price Prediction
-    15. Music Genre Classification

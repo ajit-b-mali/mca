@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="navApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Navigation Menu</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 32px;
+            background: #fafbfc;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            color: #222;
+        }
+        nav ul {
+            display: flex;
+            gap: 8px;
+            padding: 0;
+            margin: 0 0 16px 0;
+            list-style: none;
+            border-bottom: 1px solid #eee;
+        }
+        nav li {
+            margin: 0;
+        }
+        nav a {
+            display: block;
+            padding: 6px 14px;
+            border-radius: 4px;
+            color: #222;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        nav li.active a {
+            background: #222;
+            color: #fff;
+            font-weight: 500;
+        }
+        nav li:not(.active) a:hover,
+        nav li:not(.active) a:focus {
+            background: #f0f0f0;
+        }
+        nav a:focus {
+            outline: 1.5px solid #222;
+            outline-offset: 2px;
+        }
+        .content {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            padding: 18px;
+            margin-top: 16px;
+            font-size: 1rem;
+            color: #333;
+        }
+        .content h2 {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            color: #222;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="NavController">
+
+    <h1>My Application</h1>
+    <nav>
+        <ul>
+            <li ng-class="{active: isSelected('home')}">
+                <a href="" ng-click="select('home')" ng-keydown="handleKeydown($event, 'home')">Home</a>
+            </li>
+            <li ng-class="{active: isSelected('about')}">
+                <a href="" ng-click="select('about')" ng-keydown="handleKeydown($event, 'about')">About</a>
+            </li>
+            <li ng-class="{active: isSelected('contact')}">
+                <a href="" ng-click="select('contact')" ng-keydown="handleKeydown($event, 'contact')">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div ng-show="selected === 'home'">
+            <h2>Home</h2>
+            <p>Welcome to the Home page!</p>
+        </div>
+        <div ng-show="selected === 'about'">
+            <h2>About</h2>
+            <p>This is the About page.</p>
+        </div>
+        <div ng-show="selected === 'contact'">
+            <h2>Contact</h2>
+            <p>Contact us at example@example.com.</p>
+        </div>
+    </div>
+
+    <script>
+        angular.module('navApp', [])
+            .controller('NavController', ['$scope', function($scope) {
+                $scope.selected = 'home';
+                $scope.select = function(page) {
+                    $scope.selected = page;
+                };
+                $scope.isSelected = function(page) {
+                    return $scope.selected === page;
+                };
+                $scope.handleKeydown = function(event, page) {
+                    if (event.keyCode === 13 || event.keyCode === 32) { // Enter or Space
+                        event.preventDefault();
+                        $scope.select(page);
+                    }
+                };
+            }]);
+    </script>
+</body>
+</html>

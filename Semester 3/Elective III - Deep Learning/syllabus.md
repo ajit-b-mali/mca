@@ -26,9 +26,9 @@
 - Human brain vs neural network
 - Types of applications
 - Types of data
-    - Time series data
-    - Image data
-    - Video data
+  - Time series data
+  - Image data
+  - Video data
 - Common architectural principles of deep network
 - Architecture design
 - Applications of deep learning
@@ -44,8 +44,8 @@
 - Model of artificial neuron
 - Learning rules and perceptron learning
 - Activation functions
-    - Linear activation function
-    - Non-linear activation function
+  - Linear activation function
+  - Non-linear activation function
 
 ### Neural network architecture
 
@@ -102,10 +102,10 @@
 
 - Architecture of autoencoders
 - Types of autoencoder
-    - Convolutional autoencoders
-    - Variational autoencoders
-    - Denoising autoencoders
-    - Deep autoencoders
+  - Convolutional autoencoders
+  - Variational autoencoders
+  - Denoising autoencoders
+  - Deep autoencoders
 - Regularization in autoencoders
 - Application of autoencoders: image compression
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Navigation Menu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-block: 2rem;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .active {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body ng-init="selected='Home'">
+    <h2>AngularJS Navigation Menu</h2>
+
+    <ul>
+        <li><a href="" ng-click="selected='Home'" ng-class="{'active': selected=='Home'}">Home</a></li>
+        <li><a href="" ng-click="selected='About'" ng-class="{'active': selected=='About'}">About</a></li>
+        <li><a href="" ng-click="selected='Services'" ng-class="{'active': selected=='Services'}">Services</a></li>
+        <li><a href="" ng-click="selected='Contact'" ng-class="{'active': selected=='Contact'}">Contact</a></li>
+    </ul>
+
+    <section ng-switch="selected">
+        <div ng-switch-when="Home">
+            <h3>Welcome to the Home Page!</h3>
+            <p>This is the home section of the website.</p>
+        </div>
+        <div ng-switch-when="About">
+            <h3>About Us</h3>
+            <p>Learn more about our company and values.</p>
+        </div>
+        <div ng-switch-when="Services">
+            <h3>Our Services</h3>
+            <p>Discover the services we offer to our clients.</p>
+        </div>
+        <div ng-switch-when="Contact">
+            <h3>Contact Us</h3>
+            <p>Get in touch with us through this section.</p>
+        </div>
+    </section>
+</body>
+
+</html>

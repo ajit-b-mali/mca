@@ -1,0 +1,112 @@
+Nice 👍 — for **WP Assignment 06: Create a website for resumes in WordPress**, you can’t really show PHP code like before because WordPress is CMS-based — so here’s the **simplest, step-by-step practical version** you can *do and show* easily to your sir 👇
+
+---
+
+### ✅ **WP Assignment 06: Create a Resume Website using WordPress**
+
+#### 🎯 **Objective:**
+
+To create a personal resume website using **WordPress** with pages for Profile, Education, Skills, and Contact.
+
+---
+
+### 🪜 **Steps (Simple & Specific):**
+
+#### **Step 1: Install WordPress**
+
+1. Download from [https://wordpress.org](https://wordpress.org).
+2. Extract it inside your local server folder:
+
+   * For XAMPP: `C:\xampp\htdocs\resume_site`
+3. Start **Apache** and **MySQL** in XAMPP.
+4. Open browser → go to `http://localhost/phpmyadmin`
+
+   * Create a new database: `resume_db`
+5. Visit `http://localhost/resume_site` and finish WordPress setup.
+
+---
+
+#### **Step 2: Choose or Install a Simple Theme**
+
+1. Go to **Dashboard → Appearance → Themes → Add New**
+2. Search and install **“Astra”** or **“OceanWP”** (lightweight themes).
+3. Activate it.
+
+---
+
+#### **Step 3: Create Resume Pages**
+
+1. Go to **Pages → Add New**
+2. Create these pages:
+
+   * **Home** — short intro and profile picture
+   * **Education** — list your qualifications
+   * **Skills** — show key skills with short description
+   * **Contact** — add contact form or details
+
+*(You can use “Add New Page” → paste text → click “Publish”)*
+
+---
+
+#### **Step 4: Add Menu**
+
+1. Go to **Appearance → Menus**
+2. Add the above pages to your menu
+3. Save and set it as the primary navigation
+
+---
+
+#### **Step 5: Add Resume Content (Example)**
+
+**Home Page (Block editor content):**
+
+```text
+Hi, I'm Ajit Mali 👋  
+Aspiring Full-Stack Developer  
+Welcome to my resume website.
+```
+
+**Education Page:**
+
+```text
+MCA – Modern College of Engineering, Pune  
+BSc Computer Science – 2023
+```
+
+**Skills Page:**
+
+```text
+✔ HTML, CSS, JavaScript  
+✔ PHP & MySQL  
+✔ Java, Python  
+✔ WordPress Customization
+```
+
+**Contact Page:**
+
+```text
+📧 Email: ajit@example.com  
+📞 Phone: +91-XXXXXXXXXX
+```
+
+---
+
+#### **Step 6: (Optional) Add a Contact Form**
+
+1. Install plugin → **“Contact Form 7”**
+2. Go to **Contact → Add New** → Copy the shortcode
+3. Paste it in your *Contact* page
+
+---
+
+### ✅ **Visible Output:**
+
+* A clean, 4-page resume website:
+
+  * Navigation menu on top
+  * Each page shows relevant details
+  * Looks professional and responsive
+
+---
+
+Would you like me to write this assignment in **report/word format** (Objective → Introduction → Steps → Result) like college submission format?

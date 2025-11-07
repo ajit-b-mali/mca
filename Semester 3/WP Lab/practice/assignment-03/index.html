@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Master Form</title>
+  <script>
+    function validateForm() {
+      const id = document.getElementById("pid").value.trim();
+      const name = document.getElementById("pname").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const city = document.getElementById("city").value.trim();
+      const contact = document.getElementById("contact").value.trim();
+      const dob = new Date(document.getElementById("dob").value);
+
+      if (id === "" || isNaN(id)) {
+        alert("Patient ID must be a number!");
+        return false;
+      }
+      if (name === "" || !/^[A-Za-z ]+$/.test(name)) {
+        alert("Enter a valid patient name (letters only)!");
+        return false;
+      }
+      if (address === "") {
+        alert("Address cannot be empty!");
+        return false;
+      }
+      if (city === "" || !/^[A-Za-z ]+$/.test(city)) {
+        alert("Enter a valid city name!");
+        return false;
+      }
+      if (!/^[0-9]{10}$/.test(contact)) {
+        alert("Contact number must be 10 digits!");
+        return false;
+      }
+      if (dob === "Invalid Date" || dob >= new Date()) {
+        alert("Please select a valid Date of Birth!");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+</head>
+
+<body style="font-family:Arial; margin:30px;">
+  <h2>Patient Master Form</h2>
+  <form onsubmit="return validateForm()">
+    <label>Patient ID:</label><br>
+    <input type="text" id="pid"><br><br>
+
+    <label>Patient Name:</label><br>
+    <input type="text" id="pname"><br><br>
+
+    <label>Address:</label><br>
+    <input type="text" id="address"><br><br>
+
+    <label>City:</label><br>
+    <input type="text" id="city"><br><br>
+
+    <label>Contact Number:</label><br>
+    <input type="text" id="contact"><br><br>
+
+    <label>Date of Birth:</label><br>
+    <input type="date" id="dob"><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
+  </form>
+</body>
+</html>

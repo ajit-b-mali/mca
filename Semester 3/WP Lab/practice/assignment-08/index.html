@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="studentApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Record App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 30px; }
+    input { margin: 5px; padding: 5px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background-color: #f2f2f2; }
+    button { padding: 5px 10px; margin-top: 10px; }
+  </style>
+</head>
+<body ng-controller="StudentCtrl">
+
+  <h2>Student Record Application (AngularJS)</h2>
+
+  <form ng-submit="addStudent()">
+    <input type="text" ng-model="student.id" placeholder="Student ID" required>
+    <input type="text" ng-model="student.name" placeholder="Student Name" required>
+    <input type="number" ng-model="student.marks" placeholder="Marks" required>
+    <button type="submit">Add Student</button>
+  </form>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Marks</th>
+      <th>Action</th>
+    </tr>
+    <tr ng-repeat="s in students">
+      <td>{{s.id}}</td>
+      <td>{{s.name}}</td>
+      <td>{{s.marks}}</td>
+      <td><button ng-click="removeStudent($index)">Delete</button></td>
+    </tr>
+  </table>
+
+  <p><strong>Total Students:</strong> {{students.length}}</p>
+
+  <script>
+    angular.module('studentApp', [])
+      .controller('StudentCtrl', function($scope) {
+        $scope.students = [];
+        $scope.addStudent = function() {
+          $scope.students.push({ 
+            id: $scope.student.id, 
+            name: $scope.student.name, 
+            marks: $scope.student.marks 
+          });
+          $scope.student = {}; // clear form
+        };
+        $scope.removeStudent = function(index) {
+          $scope.students.splice(index, 1);
+        };
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Textbox Value using jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    input, button { padding: 8px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Get Value of Textbox using jQuery</h2>
+
+  <input type="text" id="nameBox" placeholder="Enter your name">
+  <button id="showBtn">Show Value</button>
+
+  <p id="result"></p>
+
+  <script>
+    $(document).ready(function(){
+      $("#showBtn").click(function(){
+        var value = $("#nameBox").val();   // get textbox value
+        $("#result").text("You entered: " + value);  // display it
+      });
+    });
+  </script>
+</body>
+</html>

@@ -27,3 +27,56 @@ Q8. Discuss various types of neural network architectures in detail.
 Q9. Describe how neural networks are used in music genre classification.
 Q10. Explain the role of activation functions in deep learning networks with diagrams.
 Q11. Write a short note on how neural networks learn patterns from data.
+
+<!-- ------------------------------------------- -->
+<!-- - UNIT V: Autoencoders -------------------- -->
+<!-- ------------------------------------------- -->
+
+Q1.  Define an autoencoder. Explain its basic architecture.
+Q2.  What is the role of the bottleneck layer in an autoencoder?
+Q3.  Differentiate between undercomplete and overcomplete autoencoders.
+Q4.  What is a denoising autoencoder? State its main purpose.
+Q5.  Explain the need for regularization in autoencoders. Give two examples of regularization techniques.
+Q6.  List any four applications of autoencoders.
+Q7.  What is the reconstruction loss? Name two commonly used loss functions in autoencoders.
+Q8.  State two differences between convolutional autoencoders (CAE) and fully connected autoencoders.
+Q9.  What is the latent space representation in a variational autoencoder?
+Q10. Explain how autoencoders can be used for image compression.
+Q11. Describe the working of a deep autoencoder with a neat diagram.
+Q12. Explain the architecture and training process of a convolutional autoencoder.
+Q13. Discuss the concept of variational autoencoders (VAE) and explain how they differ from standard autoencoders.
+Q14. What is the purpose of the reparameterization trick in VAEs? Explain with an example.
+Q15. Explain how denoising autoencoders help in learning robust representations.
+Q16. Discuss different regularization techniques used in autoencoders such as sparsity constraint, weight decay, and dropout.
+Q17. Compare and contrast:
+	a) Denoising Autoencoder vs. Regular Autoencoder
+	b) Variational Autoencoder vs. Convolutional Autoencoder
+Q18. Case Study: Explain in detail how autoencoders can be applied for anomaly detection in network traffic. Discuss dataset preparation, training process, and evaluation metrics.
+Q19. Design an autoencoder model for detecting abnormal network traffic. Explain the choice of architecture, loss function, and evaluation method.
+Q20. Discuss the workflow of using autoencoders for anomaly detection. Explain how reconstruction error helps classify normal vs. anomalous events.
+
+<!-- ------------------------------------------- -->
+<!-- - UNIT VI: Applications of Deep Learning -- -->
+<!-- ------------------------------------------- -->
+
+Q1. Explain the typical stages of a machine learning project pipeline. 
+Q2. What is computer vision? Describe any two real-world applications. 
+Q3. Define image segmentation. How is it different from object detection? 
+Q4. What is the role of convolution in CNN-based vision systems? 
+Q5. Explain Intersection over Union (IoU). Where is it used? 
+Q6. What are bounding boxes? Why are they important in object detection? 
+Q7. Write a short note on semantic segmentation vs. instance segmentation. 
+Q8. What challenges arise in face recognition systems? 
+Q9. What is Named Entity Recognition (NER)? Give two examples of entities. 
+Q10. How does a recommender system benefit e-commerce platforms? 
+Q11. Describe the end-to-end workflow of an image classification task using CNNs. 
+Q12. Explain the working of the YOLO object detection algorithm. What makes it fast? 
+Q13. Discuss the importance of dataset preprocessing and augmentation in computer vision. 
+Q14. Explain the architecture and working of an automatic image captioning system. 
+Q15. Describe the steps involved in designing a face recognition pipeline using deep learning. 
+Q16. What role does NER play in information extraction? Explain with an example. 
+Q17. Discuss the types of recommender systems with suitable examples. 
+Q18. Compare and contrast the main components of image segmentation (semantic, instance, and panoptic) with diagrams. Provide real-world use cases for each. 
+Q19. Explain the perception pipeline in self-driving vehicles. Discuss how object detection, lane detection, and scene understanding work together. 
+Q20. Develop a detailed case study for an AI-based application of your choice (e.g., facial recognition attendance system, automatic image captioning for visually impaired users, or movie recommender system). Include problem statement, methodology, dataset, model pipeline, challenges, and evaluation metrics.
+

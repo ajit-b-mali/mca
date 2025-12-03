@@ -1,0 +1,91 @@
+--------------------------------------------------
+UNIT I: Fundamentals of Software Quality Assurance
+--------------------------------------------------
+
+Q1. What is Quality Assurance?
+Q2. What is Quality Control?
+Q3. Differentiate between  Quality Assurance and Quality Control.
+Q4. Which are criteria for the success of a software project?
+Q5. Explain CMM/CMMI.
+Q6. What are the Activities of SQA.
+Q7. Explain ISO900 principles.
+Q8. What is process-oriented software development?
+
+
+---------------------------------------
+UNIT II: Essentials of Software Testing
+---------------------------------------
+
+Q1. Differentiate between Verification and Validation.
+Q2. What is Testing? Write down objective of Testing?
+Q3. Explain Testing Life cycle.
+Q4. What is Test plan? Prepare sample test plan.
+Q5. What is Test plan? How to execute test plan.
+Q6. Define the term test plan, Test cases.
+Q7. With the help of case studies write down Test plan and Test cases.
+Q8. Write note on
+	a) TDD
+	b) BDD
+	c) ATDD
+
+-------------------------------------
+UNIT III: Software Testing Techniques
+-------------------------------------
+
+Q1. Explain White Box testing methodologies.
+Q2. Explain Black Box testing methodologies.
+Q3. Explain Code coverage Testing.
+Q4. Explain Equivalence Partitioning.
+Q5. Explain Boundary value analysis with example.
+Q6. Explain decision table testing with example.
+Q7. Explain mutation testing.
+Q8. What is State Transition Testing?
+
+
+---------------------------
+UNIT IV: Testing Strategies
+---------------------------
+
+Q1. What is Integration testing? Explain types of it.
+Q2. Explain System testing.
+Q3. Explain Acceptance testing.
+Q4. Explain Regression testing.
+Q5. Explain Ad hoc Testing.
+Q6. Explain GUI Testing.
+Q7. What are different types of testing.
+Q8. Explain functional & non functional testing.
+
+--------------------------------
+UNIT V: Software Test Automation
+--------------------------------
+
+Q1. What is automation testing and why is it important in software development?
+Q2. Explain the need for automation testing tools over manual testing.
+Q3. Discuss the advantages and challenges of using automation testing tools.
+Q4. What is Cypress and what are its key features in automation testing?
+Q5. Describe the role of TestNG in test automation and its key functionalities.
+Q6. What types of tests can be automated using Cypress and JMeter respectively?
+Q7. How does automation testing improve the efficiency of regression testing?
+Q8. Discuss the criteria for selecting the appropriate automation tool for a given project.
+
+----------------------
+UNIT VI: Selenium Tool
+----------------------
+
+Q1. Explain WebDriver.
+Q2. Explain Selenium Grid.
+Q3. Explain Software Test Automation through Selenium open source tool.
+Q4. What is scripting language? Explain it.
+Q5. Explain Selenium IDE.
+Q6. Explain Selenium RC.
+Q7. Explain brief history of Selenium.
+Q8. What are advantages of Selenium Web driver?
+
+
+
+
+
+
+
+
+ 

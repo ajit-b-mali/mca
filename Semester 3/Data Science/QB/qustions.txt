@@ -16,24 +16,9 @@ Q5. Differentiate between -
 
 Q6. Explain use of Data Science with an example.
 Q7. Differentiate between Big data and Data Science.
-
-<!-- CIE-I
-
 Q8. Explain the different roles of Data Science.
 Q9. Explain the different stages of a Data Science.
 Q10. Compare quantitative and categorical data with the help of suitable example.
-
-<!-- CIE-I - repeat
-
-_. What is the need of Data Science? [ see CDD Q2 ]
-_. Compare structured and Unstructured data with the help of suitable example. [ see CDD Q5a ]
-_. Explain the Role of Data Scientist for successful analytic project. [ see CDD Q4]
-_. Differentiate between
- 	_. Structured and Unstructured Data
- 	_. Quantitative vs. Categorical, Data
- 	_. small Data Vs. Big data
- 	_. Business Intelligence and Data Science [ see CDD Q5 ]
-_. Differentiate between Big data and Data Science [ see CDD Q7 ]
 
 <!-------------------------------------------------------->
 <!-- - UNIT II: Data Warehouse and Data Preprocessing - -->
@@ -51,24 +36,7 @@ Q7. With respect to Data warehouse explain following terms with suitable example
     a. Data Lake
     b. Data Mart
     c. Fact table
-
-<!-- CIE-I
-
-Q9. Explain Data Warehouse architecture.
-
-<!-- CDD - repeat
-
-_. Explain Types of data preprocessing. [ see CDD Q3 ]
-
-<!-- CIE-I - repeat
-
-_. What is the Need of Data Warehouse? [ see CDD Q1 ]
-_. Identify the techniques of data pre-processing. [ see CDD Q3 ]
-_. What are different Data Pre-processing Techniques? [ see CDD Q3 ]
-_. Explain 3-tier data warehouse architecture and its various components. [ see CDD Q5 ]
-_. Explain Types of data pre-processing. [ see CDD Q3 ]
-_. What is the problem associated with data processing? [ see CDD Q2 ]
-_. What is Data Warehouse? Explain the advantages and disadvantages of Data Warehouse. [ see CDD Q4 ]
+Q8. Explain Data Warehouse architecture.
 
 <!-------------------------------------------------------->
 <!-- - UNIT III: Classification and Regression -------- -->
